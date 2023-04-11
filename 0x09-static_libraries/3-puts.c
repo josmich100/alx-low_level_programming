@@ -1,11 +1,11 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _puts - prints string
- * @str: input string
- * Return: no return
+ * _puts - check the code
+ *
+ * @str: input
+ *
  */
-
 void _puts(char *str)
 {
 	while (*str != '\0')
@@ -13,5 +13,6 @@ void _puts(char *str)
 		_putchar(*str);
 		str++;
 	}
+
 	_putchar('\n');
 }

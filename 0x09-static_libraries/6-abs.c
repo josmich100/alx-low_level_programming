@@ -1,18 +1,24 @@
-#include "holberton.h"
+#include "main.h"
+/* more headers goes there */
 
 /**
- * _abs - check the code for Holberton School students.
+ * _abs - Entry point
  *
- * @n: is an integer argument
+ * @n: param
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 
 int _abs(int n)
 {
-	if (n >= 0)
-	{
-		return (n);
-	}
-	return (-n);
+
+if (n < 0)
+{
+return (-n);
+}
+else
+{
+return (n);
+}
+
 }

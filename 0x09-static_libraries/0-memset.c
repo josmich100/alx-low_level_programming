@@ -1,13 +1,14 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _memset - ironnou
- * @s: pointer to char params
- * @b: data to change
- * @n: index
- * Return: *s
+ * _memset - check the code
+ *
+ * @s: input
+ * @b: input
+ * @n: input
+ *
+ * Return: char
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
@@ -16,5 +17,6 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		s[i] = b;
 	}
+
 	return (s);
 }

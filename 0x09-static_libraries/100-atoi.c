@@ -1,29 +1,37 @@
-#include "holberton.h"
+#include "main.h"
+#include "limits.h"
 /**
- * _atoi - int
- * @s: pointer
- * Return: int.
+ * _atoi - check the code
+ *
+ * @s: input
+ *
+ * Return: output
  */
 int _atoi(char *s)
 {
-	int i;
-	int res = 0;
-	int sig = -1;
-	int brk = 0;
+	unsigned int result = 0;
+	int sign = 1;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
-			sig = sig * -1;
+			sign *= -1;
+
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			res = res * 10;
-			res -= (s[i] - '0');
-			brk = 1;
+			result = result * 10 + (s[i] - '0');
+
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
 		}
-		else if (brk == 1)
-			break;
+		i++;
 	}
-	res = sig * res;
-	return (res);
+
+	if (result > (unsigned long)INT_MAX && sign == 1)
+		return (0);
+	if (result > (unsigned long)INT_MAX + 1 && sign == -1)
+		return (0);
+
+	return ((int)result * sign);
 }

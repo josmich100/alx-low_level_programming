@@ -1,16 +1,21 @@
-#include "holberton.h"
+#include "main.h"
+/* more headers goes there */
 
 /**
- * _isdigit - check the code for Holberton School students.
+ * _isdigit - Entry point
  *
- * @c: is an integer param
+ * @c: param
  *
- * Return: Always 0.
+ * Return: Always 0
  */
-
 
 int _isdigit(int c)
 {
 
-	return (c >= 48 && c <= 57);
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+
+	return (0);
 }

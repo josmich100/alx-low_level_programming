@@ -1,1 +1,2 @@
-#0x09-static_libraries
+# alx-low_level_programming
+Learning C

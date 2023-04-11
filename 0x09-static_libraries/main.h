@@ -1,7 +1,8 @@
-#ifndef FILE_HOLBERTON
-#define FILE_HOLBERTON
+#ifndef MAIN_H
+#define MAIN_H
 
-/*copy list from task*/
+#include<stdio.h>
+#include<string.h>
 
 int _putchar(char c);
 int _islower(int c);
